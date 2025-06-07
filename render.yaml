@@ -1,0 +1,8 @@
+services:
+  - type: worker
+    name: billibot-worker
+    env: python
+    docker:
+      dockerfile: Dockerfile
+    buildCommand: docker build -t billibot .
+    startCommand: bash start
